@@ -1,14 +1,10 @@
 pipeline {
     agent any
+
     stages {
-        stage('Checkout') {
+        stage('Hello') {
             steps {
-                git 'https://github.com/mhassini/avec-maven.git'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'mvn clean install'
+                echo 'Hello World'
             }
         }
     }
